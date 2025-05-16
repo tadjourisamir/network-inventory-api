@@ -17,7 +17,7 @@ Ideal for learning, testing, and demonstration purposes.
 
 A public, read-only demo is available at:
 
-🔗 https://your-render-link.com
+🔗 https://network-inventory-api-demo.onrender.com/
 
 > Demo mode allows only `GET` requests.
 > For full functionality (POST / PUT / DELETE), use the local full version.
