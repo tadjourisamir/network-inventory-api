@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Metadata and title -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Network Inventory API – Demo</title>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <a href="/">Home</a>
+    <a href="/inventory">Inventory</a>
+    <a href="/export?format=csv" target="_blank">Export CSV</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Logo and header section -->
+  <header class="header">
+    <img src="{{ url_for('static', filename='logo-network-api.png') }}" alt="Logo Network API" class="hero-logo" />
+    <p>Version {{ app_version }} - {{ app_mode }} Version</p>
+  </header>
+
+  <!-- Main content area -->
+  <main>
+
+    <!-- About section -->
+    <section id="about" class="section" aria-label="Project Overview">
+      <h2>📌 Project Overview</h2>
+      <p>This project is a simple RESTful API built with Flask to manage network equipment like switches, routers, and access points.</p>
+      <p>It's part of a personal learning path to create structured, documented APIs using modern tools and best practices.</p>
+
+      <h3>🛠️ Technologies Used</h3>
+      <ul>
+        <li>🐍 Python 3.12.3</li>
+        <li>🫙 Flask 3.1.0</li>
+        <li>🛢 SQLite 3.45.3</li>
+        <li>🌐 HTML & CSS</li>
+        <li>⚙️ JavaScript</li>
+      </ul>
+    </section>
+
+    <!-- API Endpoints section -->
+    <section id="routes" class="section" aria-label="API Endpoints">
+      <h2>📡 API Endpoints</h2>
+      <p>The API provides a set of routes to interact with your network inventory data. All data is sent and received as JSON.</p>
+
+      <ul>
+        <li><code>GET /equipements</code> — Fetch all equipment</li>
+        <li><code>GET /equipements/&lt;id&gt;</code> — Get a specific equipment by its ID</li>
+        <li><code>POST /equipements</code> — Add new equipment (expects JSON)</li>
+        <li><code>PUT /equipements/&lt;id&gt;</code> — Update an existing equipment entry</li>
+        <li><code>DELETE /equipements/&lt;id&gt;</code> — Delete equipment (⚠ irreversible)</li>
+      </ul>
+
+      <!-- Demo warning notice -->
+      <div class="demo-alert">
+        <p>
+          <span class="demo-icon">ℹ️</span> This online interface is a <strong>demo version</strong>: only 
+          <code>GET</code> requests are available.
+        </p>
+        <p>
+          The <strong>full version</strong> (with add, update, and delete features) is available on 
+          <a href="https://github.com/tadjourisamir/network-inventory-api" target="_blank" rel="noopener noreferrer">GitHub</a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- How to Use section -->
+    <section id="howtouse" class="section" aria-label="How to Use">
+      <h2>🚀 How to Use the API</h2>
+      <p>Use any HTTP client like <strong>curl</strong>, <strong>Postman</strong>, or your frontend app to interact with the endpoints.</p>
+      <p>All responses are returned in <code>application/json</code> format. For detailed usage and examples, check the README.</p>
+    </section>
+  </main>
+
+  <!-- Footer with GitHub link -->
+  <footer id="contact" class="footer" role="contentinfo">
+    <p>
+      &copy; 2025 · <strong>Network Inventory API V{{ app_version }}</strong> ·
+      <a href="https://github.com/tadjourisamir/network-inventory-api"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="Visit the GitHub repository">
+        <!-- GitHub Icon SVG -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+             viewBox="0 0 24 24" fill="currentColor" style="vertical-align: text-bottom;">
+          <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.6v-2.2c-3.2.7-3.9-1.5-3.9-1.5-.6-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.2.1 1.8 1.3 1.8 1.3 1.1 1.8 2.9 1.3 3.6 1 .1-.8.4-1.3.7-1.6-2.5-.3-5.2-1.3-5.2-5.6 0-1.3.5-2.3 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0C17.5 5.8 18.5 6 18.5 6c.6 1.7.2 2.9.1 3.2.8.9 1.2 1.9 1.2 3.2 0 4.3-2.7 5.3-5.3 5.6.5.4.8 1.1.8 2.2v3.2c0 .3.2.6.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.65 18.35.5 12 .5z"/>
+        </svg>
+        GitHub
+      </a>
+    </p>
+  </footer>
+
+</body>
+</html>
