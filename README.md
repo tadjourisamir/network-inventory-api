@@ -1,8 +1,8 @@
+![new](https://github.com/user-attachments/assets/8163f838-3ff6-48fd-b346-71bc950692b1)
 
-🌐 Network Inventory API
-========================
+# 🌐 Network Inventory API – Lightweight RESTful API
 
-A simple and lightweight RESTful API built with Flask and SQLite to manage a small inventory of network devices (switches, routers, access points...).
+**A simple and lightweight RESTful API built with Flask and SQLite to manage a small inventory of network devices (switches, routers, access points...).**
 
 This project includes two versions:
 - 🧪 A **demo version** (read-only) for public viewing
